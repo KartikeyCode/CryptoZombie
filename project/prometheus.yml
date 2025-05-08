@@ -6,6 +6,6 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
   
-  - job_name: 'cryptozombie-app'
+  - job_name: 'node_app'
     static_configs:
-      - targets: ['app:80']
+      - targets: ['host.docker.internal:5173'] # For Windows Docker
